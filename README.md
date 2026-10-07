@@ -1,110 +1,482 @@
-# Srijan Kumar — Portfolio
+# Srijan Kumar — Developer Portfolio
 
-A premium, dark-first personal portfolio for **Srijan Kumar**, Full-Stack Software Engineer.
-Built with Next.js 16, React 19, TypeScript (strict), Tailwind CSS v4, shadcn-style UI
-primitives, Lucide icons and Framer Motion.
+> Personal portfolio website showcasing my projects, technical skills, experience, achievements, certifications, and approach to building modern web applications.
 
-All content is sourced strictly from the attached resume (`public/resume/Srijan_Kumar_Resume.pdf`).
-Nothing is invented — fields without real data are hidden, never faked.
+🌐 **Live Portfolio:** Add your Vercel URL here  
+💻 **GitHub:** https://github.com/srijan2312  
+📄 **Resume:** [View Resume](./public/resume/Srijan_Kumar_Resume.pdf)
 
-## Quick start
+---
 
-```bash
-npm install
-npm run dev        # http://localhost:3000
-```
+## About
 
-## Scripts
+This is my personal developer portfolio, built to present my work and technical background through a clean, professional, and interactive experience.
 
-| Script          | Purpose                              |
-|-----------------|--------------------------------------|
-| `npm run dev`   | Development server                   |
-| `npm run build` | Production build                     |
-| `npm run start` | Serve the production build           |
-| `npm run lint`  | ESLint                               |
-| `npm run typecheck` | `tsc --noEmit`                   |
-| `npm run test`  | Vitest suite (`vitest run`)          |
+The portfolio focuses on:
 
-## Environment
+- Full-stack web development
+- Modern JavaScript applications
+- React and Next.js
+- Node.js and REST APIs
+- MongoDB
+- Docker and cloud technologies
+- Practical, production-oriented engineering
 
-Copy `.env.example` to `.env.local`:
+The website also provides detailed case studies for my projects, including their architecture, technologies, engineering decisions, challenges, and implementation details.
 
-- `NEXT_PUBLIC_SITE_URL` — production domain for canonical URLs, sitemap and Open Graph.
-  Defaults to `https://srijankumar.dev` (placeholder — set the real domain on deploy).
-- `GITHUB_TOKEN` — optional. Raises the GitHub API rate limit for `/api/github`
-  and enables private repositories. Never commit a real token.
+---
 
-## Project structure
+## Featured Projects
 
-```
-src/
-├── app/                    # Routes: / , /projects, /projects/[slug], /api/github
-│                           # + sitemap, robots, opengraph-image, not-found, error, loading
-├── components/
-│   ├── ui/                 # Button, Badge, Container, SectionHeading, Reveal
-│   ├── layout/             # SiteHeader (sticky nav), SiteFooter
-│   ├── hero/               # HeroSection, SystemDiagram (interactive SVG)
-│   ├── sections/           # About, HowIBuild, Skills, Experience, Projects,
-│   │                       # Achievements, Certifications, Resume, Contact
-│   ├── projects/           # ProjectCard, ProjectFilters, ProjectsExplorer,
-│   │                       # ArchitectureDiagram, ProjectCaseStudy
-│   └── icons/              # Brand icons (GitHub, LinkedIn — lucide has none)
-├── data/                   # Typed content: projects, skills, experience,
-│                           # certifications, achievements, socials, nav, site
-├── lib/                    # utils (cn), github (env-gated, cached API client)
-└── types/                  # Content model (Project, SkillCategory, …)
+### LinkGraveyard
 
-tests/                      # Vitest: data integrity, filtering, GitHub lib, filters UI
-public/resume/              # The real, downloadable resume PDF
-```
+**Web Resource Preservation & Health Monitoring Platform**
 
-## Content model — adding a project
+A full-stack application for saving, organizing, and monitoring the health of web resources.
 
-Projects are data, not components. Append one object to `src/data/projects.ts`:
+**Key Features**
 
-```ts
-{
-  slug: "my-project",          // → /projects/my-project (static route, auto-generated)
-  title: "My Project",
-  tagline: "What it is",
-  category: "full-stack",      // frontend | full-stack | backend | blockchain
-  period: "Jan 2024 – Mar 2024",
-  description: "…",
-  problem: "…",
-  solution: "…",
-  architecture: [{ label: "React.js", detail: "…" }, /* top → bottom */],
-  features: ["…"],
-  technologies: ["React.js", "Node.js"],
-  challenges: [{ title: "…", detail: "…" }],
-  engineeringDecisions: ["…"],
-  results: ["…"],              // optional — only real outcomes
-  github: "https://github.com/…", // optional — only verified URLs
-  live: "https://…",           // optional — only verified URLs
-}
-```
+- JWT-based authentication
+- Save and manage URLs
+- Categories and tags
+- Search and filtering
+- Manual link health checks
+- Bulk link checking
+- Healthy / Redirected / Broken / Never Checked states
+- Redirect detection
+- Link check history
+- Dashboard statistics
+- Responsive interface
+- User-specific data isolation
 
-Rules enforced by tests: every field required above must be non-empty, slugs must be
-unique and URL-safe, categories must be valid, and `github`/`live` must be real
-`https://` URLs. Omit `github`/`live`/`results` when there is nothing real — the UI
-hides those sections automatically.
+**Tech Stack**
+
+React.js · JavaScript · Vite · Node.js · Express.js · MongoDB · Mongoose · JWT · Axios
+
+🔗 **Live Demo:** Add LinkGraveyard live URL here  
+💻 **Source Code:** https://github.com/srijan2312/LinkGraveyard
+
+---
+
+### SkillSwap
+
+**Peer-to-Peer Skill Exchange Platform**
+
+A full-stack platform designed to help users exchange knowledge and skills with other users.
+
+**Key Features**
+
+- User authentication
+- Skill discovery
+- User profiles
+- Skill exchange workflow
+- Search and filtering
+- Responsive UI
+- Full-stack REST API architecture
+
+**Tech Stack**
+
+React.js · JavaScript · Node.js · Express.js · MongoDB · REST API
+
+🔗 **Live Demo:** https://skill-swap-peer-to-peer-skill-excha-lovat.vercel.app  
+💻 **Source Code:** https://github.com/srijan2312/SkillSwap-Peer-to-Peer-Skill-Exchange-Platform
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- React.js
+- Next.js
+- JavaScript
+- TypeScript
+- HTML5
+- CSS3
+- Tailwind CSS
+- Vite
+
+### Backend
+
+- Node.js
+- Express.js
+- REST APIs
+- JWT Authentication
+- bcrypt
+
+### Database
+
+- MongoDB
+- Mongoose
+
+### DevOps & Tools
+
+- Git
+- GitHub
+- Docker
+- AWS
+- Vercel
+- Render
+- Postman
+- VS Code
+
+---
+
+## Portfolio Features
+
+### Project Explorer
+
+Projects can be explored through dedicated case-study pages containing:
+
+- Project overview
+- Problem statement
+- Solution
+- Architecture
+- Features
+- Technologies
+- Engineering challenges
+- Technical decisions
+- Results
+- GitHub repository
+- Live deployment
+
+### Responsive Design
+
+The portfolio is designed to work across:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+### Accessibility
+
+The interface includes:
+
+- Semantic HTML
+- Keyboard-friendly interactions
+- Accessible labels
+- Focus states
+- Responsive navigation
+
+### Performance & SEO
+
+The portfolio uses Next.js features for:
+
+- Optimized page rendering
+- Static generation where appropriate
+- Optimized fonts
+- Metadata
+- Sitemap
+- Robots configuration
+- Open Graph metadata
+
+---
+
+## Project Structure
+
+    srijan-kumar-portfolio/
+    │
+    ├── public/
+    │   └── resume/
+    │       └── Srijan_Kumar_Resume.pdf
+    │
+    ├── src/
+    │   ├── app/
+    │   │   ├── api/
+    │   │   ├── projects/
+    │   │   │   └── [slug]/
+    │   │   ├── error.tsx
+    │   │   ├── layout.tsx
+    │   │   ├── loading.tsx
+    │   │   ├── not-found.tsx
+    │   │   ├── page.tsx
+    │   │   ├── robots.ts
+    │   │   └── sitemap.ts
+    │   │
+    │   ├── components/
+    │   │   ├── hero/
+    │   │   ├── icons/
+    │   │   ├── layout/
+    │   │   ├── projects/
+    │   │   ├── sections/
+    │   │   └── ui/
+    │   │
+    │   ├── data/
+    │   │   ├── achievements.ts
+    │   │   ├── certifications.ts
+    │   │   ├── experience.ts
+    │   │   ├── nav.ts
+    │   │   ├── projects.ts
+    │   │   ├── site.ts
+    │   │   ├── skills.ts
+    │   │   └── socials.ts
+    │   │
+    │   ├── lib/
+    │   │   ├── github.ts
+    │   │   └── utils.ts
+    │   │
+    │   └── types/
+    │       └── index.ts
+    │
+    ├── tests/
+    │
+    ├── .env.example
+    ├── .gitignore
+    ├── next.config.ts
+    ├── package.json
+    ├── README.md
+    └── tsconfig.json
+
+---
+
+## Architecture
+
+The portfolio follows a component-based Next.js architecture.
+
+    Visitor
+       │
+       ▼
+    Next.js App Router
+       │
+       ├───────────────┬────────────────┐
+       ▼               ▼                ▼
+    Sections        Projects           Pages
+       │               │
+       ▼               ▼
+    Data Modules   Project Data
+                       │
+                       ▼
+                 Case Studies
+
+The application keeps content-driven data separate from reusable UI components, making projects and other portfolio sections easier to maintain.
+
+---
+
+## Getting Started
+
+### 1. Clone the repository
+
+    git clone https://github.com/srijan2312/srijan-kumar-portfolio.git
+
+### 2. Navigate into the project
+
+    cd srijan-kumar-portfolio
+
+### 3. Install dependencies
+
+    npm install
+
+### 4. Configure environment variables
+
+Create a `.env.local` file if required by the project.
+
+Use `.env.example` as the reference.
+
+    cp .env.example .env.local
+
+Do not commit `.env.local` or any secret values to GitHub.
+
+### 5. Start the development server
+
+    npm run dev
+
+Open `http://localhost:3000` in your browser.
+
+---
+
+## Available Scripts
+
+### Development
+
+    npm run dev
+
+Starts the Next.js development server.
+
+### Production Build
+
+    npm run build
+
+Creates an optimized production build.
+
+### Production Server
+
+    npm run start
+
+Runs the production build locally.
+
+### Tests
+
+    npm run test
+
+Runs the automated test suite.
+
+---
+
+## Environment Variables
+
+Environment variables should be stored locally and never committed to GitHub.
+
+Example:
+
+    NEXT_PUBLIC_SITE_URL=
+
+The actual environment variables required by the project should be defined in `.env.example`.
+
+---
+
+## Testing
+
+The project includes automated tests for important application behavior.
+
+Test files include:
+
+    tests/
+    ├── github.test.ts
+    ├── project-filters.test.tsx
+    ├── projects-data.test.ts
+    ├── site-data.test.ts
+    └── setup.ts
+
+Run the test suite with:
+
+    npm run test
+
+---
 
 ## Deployment
 
-Deploy to Vercel (recommended) or any Node host:
+The portfolio is designed to be deployed using Vercel.
 
-```bash
-npm run build && npm run start
-```
+Deployment flow:
 
-Set `NEXT_PUBLIC_SITE_URL` (and optionally `GITHUB_TOKEN`) in the host's environment.
+    GitHub Repository
+           │
+           ▼
+         Vercel
+           │
+           ▼
+      Production Build
+           │
+           ▼
+      Live Portfolio
 
-## Design notes
+Once GitHub and Vercel are connected, new pushes to the production branch can trigger new deployments automatically.
 
-- Dark-first "engineering laboratory + editorial" identity: Fraunces (display serif),
-  Inter (body), JetBrains Mono (technical labels); deep charcoal surfaces; restrained
-  violet/blue accents; film grain + blueprint grid; no gradients-everywhere.
-- Entrance and scroll animations are pure CSS (no hydration races, no-JS safe,
-  instant under `prefers-reduced-motion`). Framer Motion is used only for the
-  project-filter layout animations, which always resolve to a visible state.
-- Redux Toolkit was deliberately **not** added: all state is local component state
-  plus URL search params (`?category=`), which is the correct scope for this app.
+---
+
+## Design Philosophy
+
+The portfolio intentionally avoids a generic template-style appearance.
+
+The design focuses on:
+
+- Editorial typography
+- Strong visual hierarchy
+- Dark professional interface
+- Subtle gradients
+- Minimal animations
+- Structured project presentation
+- Clear technical information
+- Responsive layouts
+
+The goal is to make the portfolio feel like a developer's engineering workspace rather than a generic portfolio template.
+
+---
+
+## Engineering Principles
+
+### Keep the architecture understandable
+
+The project uses straightforward architecture without unnecessary abstractions or over-engineering.
+
+### Reusable components
+
+Common UI patterns are implemented as reusable components to reduce duplication.
+
+### Data-driven project pages
+
+Project information is maintained through structured project data instead of duplicating the same information across multiple pages.
+
+### Type safety
+
+TypeScript types are used for structured application data and component interfaces.
+
+### Maintainability
+
+The project favors solutions that are easy to understand, modify, test, and explain during technical discussions.
+
+### Performance
+
+Next.js features are used where they provide practical benefits without unnecessarily complicating the application.
+
+---
+
+## Why I Built This
+
+I built this portfolio to demonstrate more than just a list of technologies.
+
+Each project is presented with its:
+
+- Problem
+- Solution
+- Architecture
+- Features
+- Technical decisions
+- Challenges
+- Engineering trade-offs
+
+This makes the portfolio useful both as a personal website and as a technical representation of my development work.
+
+---
+
+## Future Improvements
+
+Potential future improvements include:
+
+- More detailed project case studies
+- Additional project demos
+- Improved analytics
+- More interactive architecture visualizations
+- Additional accessibility improvements
+- Performance monitoring
+- Further SEO optimization
+
+These improvements are intentionally kept outside the current scope to maintain a simple and maintainable codebase.
+
+---
+
+## Contact
+
+**Srijan Kumar**
+
+Full-Stack Software Engineer
+
+📍 Bettiah, Bihar, India
+
+📧 srijankumar11627@gmail.com
+
+### Connect
+
+- GitHub: https://github.com/srijan2312
+- LinkedIn: Add your LinkedIn URL here
+- Portfolio: Add your deployed portfolio URL here
+
+---
+
+## License
+
+This project is a personal portfolio website.
+
+The source code is publicly available for reference and learning. Personal content, resume information, project-specific content, images, and other personal assets should not be reused without permission.
+
+---
+
+## Author
+
+**Srijan Kumar**
+
+Computer Science Engineering Graduate  
+Full-Stack Software Engineer
+
+Built with **Next.js, React, TypeScript, and modern web technologies.**
