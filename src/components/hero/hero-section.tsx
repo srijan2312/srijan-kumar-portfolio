@@ -186,7 +186,7 @@ export function HeroSection() {
               </span>
 
               <span className="font-mono text-[13px]">
-                Bettiah, Bihar · Full-Stack Developer
+                Bihar, India · Full-Stack Developer
               </span>
             </p>
           </div>
