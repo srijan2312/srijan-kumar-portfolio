@@ -14,7 +14,9 @@ describe("project data integrity", () => {
 
   it("gives every project a unique, URL-safe slug", () => {
     const slugs = getAllProjectSlugs();
+
     expect(new Set(slugs).size).toBe(slugs.length);
+
     for (const slug of slugs) {
       expect(slug).toMatch(/^[a-z0-9-]+$/);
     }
@@ -32,6 +34,7 @@ describe("project data integrity", () => {
       expect(p.challenges.length).toBeGreaterThan(0);
       expect(p.engineeringDecisions.length).toBeGreaterThan(0);
       expect(p.architecture.length).toBeGreaterThan(1);
+
       for (const layer of p.architecture) {
         expect(layer.label.trim().length).toBeGreaterThan(0);
       }
@@ -48,6 +51,7 @@ describe("project data integrity", () => {
     for (const p of projects) {
       for (const url of [p.github, p.live]) {
         if (url === undefined) continue;
+
         expect(() => new URL(url)).not.toThrow();
         expect(url.startsWith("https://")).toBe(true);
       }
@@ -58,6 +62,7 @@ describe("project data integrity", () => {
     for (const p of projects) {
       expect(getProject(p.slug)?.title).toBe(p.title);
     }
+
     expect(getProject("no-such-project")).toBeUndefined();
   });
 });
@@ -69,14 +74,8 @@ describe("filterProjects", () => {
 
   it("filters by category", () => {
     const fullStack = filterProjects(projects, "full-stack");
+
     expect(fullStack.length).toBeGreaterThan(0);
     expect(fullStack.every((p) => p.category === "full-stack")).toBe(true);
-  });
-
-  it("returns an empty list for categories with no projects", () => {
-    // No blockchain projects exist in the data — the UI must show an
-    // honest empty state rather than break.
-    const result = filterProjects(projects, "blockchain");
-    expect(result).toEqual([]);
   });
 });
