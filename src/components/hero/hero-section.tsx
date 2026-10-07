@@ -118,6 +118,7 @@ export function HeroSection() {
               aria-label={typewriterText}
             >
               {displayText}
+
               <span
                 aria-hidden="true"
                 className="ml-1 inline-block font-sans not-italic text-accent-violet-soft animate-pulse"
@@ -160,6 +161,7 @@ export function HeroSection() {
               </a>
             </div>
 
+            {/* Contact / professional positioning */}
             <p
               className="hero-enter mt-6 text-[15px] text-paper-400"
               {...enter(0.55)}
@@ -184,7 +186,7 @@ export function HeroSection() {
               </span>
 
               <span className="font-mono text-[13px]">
-                {site.location}
+                Bettiah, Bihar · Full-Stack Developer
               </span>
             </p>
           </div>
