@@ -1,527 +1,647 @@
-# ✦ Srijan Kumar — Full-Stack Software Engineer
+# Srijan Kumar — Developer Portfolio
 
 <p align="center">
-  <strong>Building practical, scalable and production-oriented web applications.</strong>
-</p>
-
-<p align="center">
-  <a href="YOUR_PORTFOLIO_URL">🌐 Portfolio</a>
-  ·
-  <a href="https://github.com/srijan2312">GitHub</a>
-  ·
-  <a href="YOUR_LINKEDIN_URL">LinkedIn</a>
-  ·
-  <a href="mailto:srijankumar11627@gmail.com">Email</a>
+  <strong>Full-Stack Software Engineer</strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+  A modern, production-oriented developer portfolio built with Next.js, TypeScript and Tailwind CSS.
+</p>
+
+<p align="center">
+  <a href="https://srijan-kumar-portfolio-alpha.vercel.app">
+    <img src="https://img.shields.io/badge/Live%20Portfolio-Visit-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Portfolio" />
+  </a>
+  <a href="https://github.com/srijan2312/srijan-kumar-portfolio">
+    <img src="https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" />
+  </a>
+  <a href="https://www.linkedin.com/in/srijan-kumar-2b41b124a">
+    <img src="https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
 </p>
 
 ---
 
-## ◈ About This Repository
+## 🌐 Live Website
 
-This repository contains my personal developer portfolio.
+**[Visit Portfolio →](https://srijan-kumar-portfolio-alpha.vercel.app)**
 
-It is designed to showcase not only **what I have built**, but also **how I approach software engineering**.
+The portfolio presents my:
 
-The portfolio presents:
-
-- 🧩 Full-stack projects
-- 🏗️ Project architecture
-- ⚙️ Technical implementation
-- 🧠 Engineering decisions
-- 🛠️ Development experience
-- 📚 Certifications and achievements
-- 📄 Resume
-- 🔗 Live project deployments
-- 💻 Source code
-
-> The goal is simple: **show the engineering behind the projects, not just screenshots of them.**
+- Technical skills
+- Professional experience
+- Full-stack projects
+- Project architecture and engineering decisions
+- Certifications
+- Achievements
+- Resume
+- Contact information
 
 ---
 
-## 🚀 Featured Projects
+## 👨‍💻 About
 
-<table>
-<tr>
-<td width="50%" valign="top">
+I am a **Computer Science Engineering graduate** focused on full-stack web development and building practical, production-oriented applications.
 
-### 🔗 LinkGraveyard
+My development interests include:
 
-**Web Resource Preservation & Health Monitoring Platform**
+- Full-stack web applications
+- REST API development
+- Database-driven systems
+- Authentication and authorization
+- Modern React applications
+- Next.js applications
+- Cloud deployment
+- Containerized applications
 
-A full-stack application for saving, organizing and monitoring the health of web resources.
+### Primary Technologies
 
-**Highlights**
-
-- 🔐 JWT authentication
-- 🔗 URL management
-- 🏷️ Categories & tags
-- 🔎 Search & filtering
-- ❤️ Link health monitoring
-- ↪️ Redirect detection
-- 📊 Dashboard statistics
-- 📝 Check history
-- ⚡ Manual & bulk checking
-- 👤 User-specific data isolation
-
-**Stack**
-
-`React` `JavaScript` `Vite` `Node.js` `Express` `MongoDB` `Mongoose` `JWT`
-
-**Links**
-
-→ [Live Demo](YOUR_LINKGRAVEYARD_LIVE_URL)  
-→ [Source Code](https://github.com/srijan2312/LinkGraveyard)
-
-</td>
-
-<td width="50%" valign="top">
-
-### 🤝 SkillSwap
-
-**Peer-to-Peer Skill Exchange Platform**
-
-A full-stack platform that allows users to discover skills and connect for peer-to-peer skill exchange.
-
-**Highlights**
-
-- 🔐 User authentication
-- 👤 User profiles
-- 🔎 Skill discovery
-- 🔄 Skill exchange workflow
-- 🧭 Search & filtering
-- 📱 Responsive interface
-- 🔌 REST API architecture
-
-**Stack**
-
-`React` `JavaScript` `Node.js` `Express` `MongoDB` `REST API`
-
-**Links**
-
-→ [Live Demo](https://skill-swap-peer-to-peer-skill-excha-lovat.vercel.app)  
-→ [Source Code](https://github.com/srijan2312/SkillSwap-Peer-to-Peer-Skill-Exchange-Platform)
-
-</td>
-</tr>
-</table>
+`JavaScript` · `TypeScript` · `React` · `Next.js` · `Node.js` · `Express` · `MongoDB` · `Docker` · `AWS`
 
 ---
 
-## 🧭 Portfolio Sections
+# ✨ Portfolio Highlights
 
-| Section | Purpose |
-|---|---|
-| **Hero** | Introduction and engineering focus |
-| **About** | Background and development philosophy |
-| **Skills** | Technical capabilities |
-| **Experience** | Professional / internship experience |
-| **Projects** | Featured applications and case studies |
-| **Achievements** | Competitions and accomplishments |
-| **Certifications** | Professional learning |
-| **Resume** | Downloadable resume |
-| **Contact** | Direct communication |
+The portfolio is designed as more than a static resume page.
 
----
+### Project Case Studies
 
-## 🏗️ Architecture
+Each featured project contains structured information including:
 
-The portfolio follows a modular **Next.js App Router** architecture.
+- Project overview
+- Problem statement
+- Solution
+- Key features
+- Technology stack
+- System architecture
+- Engineering challenges
+- Engineering decisions
+- Project links
 
-    ┌─────────────────────────────────────┐
-    │              Visitor                │
-    └──────────────────┬──────────────────┘
-                       │
-                       ▼
-    ┌─────────────────────────────────────┐
-    │          Next.js App Router         │
-    └──────────────────┬──────────────────┘
-                       │
-          ┌────────────┼────────────┐
-          ▼            ▼            ▼
-    ┌──────────┐ ┌───────────┐ ┌──────────┐
-    │ Sections │ │  Projects │ │  Routes  │
-    └────┬─────┘ └─────┬─────┘ └──────────┘
-         │             │
-         ▼             ▼
-    ┌──────────┐ ┌───────────────┐
-    │   Data   │ │ Project Data  │
-    │  Modules │ │ & Case Studies│
-    └──────────┘ └───────────────┘
+### Interactive Project Explorer
 
-### Architecture Principles
+Projects can be explored through:
 
-**Component-driven**
+- Category filtering
+- Dedicated project pages
+- GitHub repositories
+- Live demonstrations
+- Architecture diagrams
 
-Reusable UI components are separated from page-level logic.
+### Professional Sections
 
-**Data-driven**
+The website includes dedicated sections for:
 
-Project information is maintained in structured data instead of being duplicated across pages.
+- About
+- Skills
+- Experience
+- Projects
+- Certifications
+- Achievements
+- Resume
+- Contact
 
-**Type-safe**
+### Production Features
 
-TypeScript is used for structured application data and component interfaces.
-
-**Simple**
-
-The architecture avoids unnecessary abstractions and over-engineering.
-
----
-
-## 🧰 Technology Stack
-
-### Frontend
-
-<p>
-  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
-</p>
-
-### Backend
-
-<p>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/REST_API-02569B?style=flat-square" />
-  <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" />
-</p>
-
-### Database
-
-<p>
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square" />
-</p>
-
-### Tools & Deployment
-
-<p>
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black" />
-  <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" />
-</p>
-
----
-
-## 📂 Project Structure
-
-    srijan-kumar-portfolio/
-    │
-    ├── public/
-    │   ├── resume/
-    │   │   └── Srijan_Kumar_Resume.pdf
-    │   └── ...
-    │
-    ├── src/
-    │   ├── app/
-    │   │   ├── api/
-    │   │   ├── projects/
-    │   │   │   └── [slug]/
-    │   │   ├── error.tsx
-    │   │   ├── layout.tsx
-    │   │   ├── loading.tsx
-    │   │   ├── not-found.tsx
-    │   │   ├── page.tsx
-    │   │   ├── robots.ts
-    │   │   └── sitemap.ts
-    │   │
-    │   ├── components/
-    │   │   ├── hero/
-    │   │   ├── icons/
-    │   │   ├── layout/
-    │   │   ├── projects/
-    │   │   ├── sections/
-    │   │   └── ui/
-    │   │
-    │   ├── data/
-    │   │   ├── achievements.ts
-    │   │   ├── certifications.ts
-    │   │   ├── experience.ts
-    │   │   ├── nav.ts
-    │   │   ├── projects.ts
-    │   │   ├── site.ts
-    │   │   ├── skills.ts
-    │   │   └── socials.ts
-    │   │
-    │   ├── lib/
-    │   │   ├── github.ts
-    │   │   └── utils.ts
-    │   │
-    │   └── types/
-    │       └── index.ts
-    │
-    ├── tests/
-    │   ├── github.test.ts
-    │   ├── project-filters.test.tsx
-    │   ├── projects-data.test.ts
-    │   ├── site-data.test.ts
-    │   └── setup.ts
-    │
-    ├── .env.example
-    ├── .gitignore
-    ├── next.config.ts
-    ├── package.json
-    ├── README.md
-    └── tsconfig.json
-
----
-
-## ⚙️ Getting Started
-
-### Prerequisites
-
-Make sure you have installed:
-
-- Node.js 18+
-- npm
-- Git
-
-### Installation
-
-    git clone https://github.com/srijan2312/srijan-kumar-portfolio.git
-
-    cd srijan-kumar-portfolio
-
-    npm install
-
-### Environment
-
-Create `.env.local` when required:
-
-    cp .env.example .env.local
-
-Never commit `.env.local` or private credentials.
-
-### Development
-
-    npm run dev
-
-Open:
-
-    http://localhost:3000
-
----
-
-## 🧪 Development Commands
-
-| Command | Purpose |
-|---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Create production build |
-| `npm run start` | Run production build |
-| `npm run test` | Run automated tests |
-
----
-
-## 🔍 Engineering Highlights
-
-### Data-driven projects
-
-Project information is defined centrally and consumed by:
-
-- Project listing
-- Project cards
-- Project filters
-- Individual case-study pages
-- Metadata
-- Structured data
-
-This prevents duplicated project information.
-
-### Dynamic case studies
-
-Project pages use the project slug to dynamically render the appropriate case study.
-
-Example:
-
-    /projects/linkgraveyard
-    /projects/skillswap
-
-### SEO
-
-The portfolio includes:
-
-- Page metadata
+- Responsive design
+- SEO metadata
 - Open Graph metadata
 - Sitemap
 - Robots configuration
-- Structured data
-- Semantic HTML
-
-### Responsive UI
-
-The interface adapts across:
-
-    Desktop → Tablet → Mobile
-
-with responsive navigation, project layouts, typography, and content spacing.
+- Custom error handling
+- Loading states
+- Custom 404 page
+- GitHub integration
+- Accessible navigation
+- Responsive project layouts
 
 ---
 
-## 🎨 Design Direction
+# 🚀 Featured Projects
 
-The visual language combines:
+## 01 — LinkGraveyard
 
-**Editorial**
+### Web Resource Preservation & Health Monitoring Platform
 
-Strong typography and structured content hierarchy.
+**LinkGraveyard** is a full-stack web application for saving, organizing and monitoring the health of web resources.
 
-**Technical**
+Instead of simply bookmarking URLs, the application allows users to keep track of whether saved resources are still reachable, redirected or broken.
 
-Monospace labels, architecture diagrams, technology information and engineering-focused case studies.
+### Core Features
 
-**Minimal**
+- User authentication
+- JWT-based sessions
+- Secure password hashing
+- URL management
+- Categories
+- Tags
+- Search and filtering
+- Manual link health checks
+- Bulk link checking
+- Healthy / Redirected / Broken status
+- Never Checked state
+- Redirect detection
+- Link check history
+- Dashboard statistics
+- User-specific data isolation
+- Responsive interface
 
-Limited decorative elements and purposeful motion.
+### Architecture
 
-**Professional**
+```text
+┌──────────────────────┐
+│      React Client    │
+│   Vite + JavaScript  │
+└──────────┬───────────┘
+           │
+           │ REST API
+           ▼
+┌──────────────────────┐
+│   Node.js + Express  │
+│    Authentication    │
+│   Link Health Logic  │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│       MongoDB        │
+│      Mongoose        │
+│                      │
+│ Users                │
+│ Links                │
+│ Link Check History   │
+└──────────────────────┘
+```
 
-Designed primarily for recruiters, hiring managers, engineers and potential collaborators.
+### Technology Stack
+
+**Frontend**
+
+- React
+- JavaScript
+- Vite
+- React Router
+- Axios
+- Lucide React
+
+**Backend**
+
+- Node.js
+- Express.js
+- REST APIs
+- JWT
+- bcryptjs
+
+**Database**
+
+- MongoDB
+- Mongoose
+
+### Links
+
+- **Live Demo:** https://link-graveyard.vercel.app/
+- **Source Code:** https://github.com/srijan2312/LinkGraveyard
 
 ---
 
-## 📸 Screenshots
+# 02 — SkillSwap
 
-### Homepage
+### Peer-to-Peer Skill Exchange Platform
 
-> Add a screenshot here if desired.
+**SkillSwap** is a full-stack platform designed around peer-to-peer skill discovery and exchange.
 
-    docs/screenshots/homepage.png
+Users can create profiles, showcase their skills and discover other users with complementary skills.
 
-### Projects
+### Core Features
 
-> Add a screenshot here if desired.
+- User authentication
+- User profiles
+- Skill discovery
+- Skill exchange
+- Search
+- Filtering
+- Connection workflows
+- Responsive interface
 
-    docs/screenshots/projects.png
+### Technology Stack
 
-### LinkGraveyard Case Study
+- React
+- JavaScript
+- Node.js
+- Express.js
+- MongoDB
+- REST APIs
 
-> Add a screenshot here if desired.
+### Links
 
-    docs/screenshots/linkgraveyard.png
-
----
-
-## 🧠 What This Portfolio Demonstrates
-
-This project demonstrates practical experience with:
-
-- Next.js App Router
-- React component architecture
-- TypeScript
-- Responsive UI development
-- Data-driven rendering
-- Dynamic routes
-- Metadata and SEO
-- Git/GitHub workflows
-- Testing
-- Production deployment
-- REST API-based application architecture
-- Full-stack project presentation
+- **Live Demo:** https://skill-swap-peer-to-peer-skill-excha-lovat.vercel.app
+- **Source Code:** https://github.com/srijan2312/SkillSwap-Peer-to-Peer-Skill-Exchange-Platform
 
 ---
 
-## 📈 Development Philosophy
+# 🧰 Technology Stack
 
-I prefer building applications that are:
+## Frontend
 
-    Simple
-       ↓
-    Understandable
-       ↓
-    Maintainable
-       ↓
-    Testable
-       ↓
-    Production-oriented
+| Technology | Purpose |
+|---|---|
+| Next.js | Application framework |
+| React | UI development |
+| TypeScript | Type safety |
+| JavaScript | Application logic |
+| Tailwind CSS | Styling |
+| Lucide React | UI icons |
 
-I avoid adding technologies simply because they are popular.
+## Backend & Data
 
-Instead, I try to choose tools based on:
+| Technology | Purpose |
+|---|---|
+| Node.js | Runtime |
+| Express.js | REST API development |
+| MongoDB | Database |
+| Mongoose | MongoDB ODM |
+| REST API | Client-server communication |
 
-- The problem being solved
-- Project complexity
-- Maintainability
+## Development & Deployment
+
+| Technology | Purpose |
+|---|---|
+| Git | Version control |
+| GitHub | Source control and repository hosting |
+| Vercel | Production deployment |
+| npm | Dependency management |
+| Docker | Containerization |
+
+---
+
+# 🏗️ Application Architecture
+
+The portfolio follows a component-driven Next.js architecture.
+
+```text
+                        ┌─────────────────────┐
+                        │     Next.js App     │
+                        │                     │
+                        │  App Router         │
+                        │  TypeScript         │
+                        │  React Components   │
+                        └──────────┬──────────┘
+                                   │
+              ┌────────────────────┼────────────────────┐
+              │                    │                    │
+              ▼                    ▼                    ▼
+       ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+       │    Pages    │      │ Components  │      │    Data     │
+       │             │      │             │      │             │
+       │ Home        │      │ Hero        │      │ Projects    │
+       │ Projects    │      │ Sections    │      │ Skills      │
+       │ Case Study  │      │ Projects    │      │ Experience  │
+       └─────────────┘      └─────────────┘      └─────────────┘
+                                   │
+                                   ▼
+                           ┌─────────────┐
+                           │  Utilities  │
+                           │             │
+                           │ GitHub API  │
+                           │ Helpers     │
+                           └─────────────┘
+```
+
+---
+
+# 📁 Project Structure
+
+```text
+srijan-kumar-portfolio/
+│
+├── public/
+│   ├── resume/
+│   │   └── Srijan_Kumar_Resume.pdf
+│   └── ...
+│
+├── src/
+│   │
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── github/
+│   │   │       └── route.ts
+│   │   │
+│   │   ├── projects/
+│   │   │   ├── page.tsx
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx
+│   │   │
+│   │   ├── error.tsx
+│   │   ├── loading.tsx
+│   │   ├── not-found.tsx
+│   │   ├── opengraph-image.tsx
+│   │   ├── robots.ts
+│   │   ├── sitemap.ts
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   │
+│   ├── components/
+│   │   ├── hero/
+│   │   ├── icons/
+│   │   ├── layout/
+│   │   ├── projects/
+│   │   └── sections/
+│   │
+│   ├── data/
+│   │   ├── achievements.ts
+│   │   ├── certifications.ts
+│   │   ├── experience.ts
+│   │   ├── nav.ts
+│   │   ├── projects.ts
+│   │   ├── site.ts
+│   │   ├── skills.ts
+│   │   └── socials.ts
+│   │
+│   ├── lib/
+│   │   ├── github.ts
+│   │   └── utils.ts
+│   │
+│   └── types/
+│       └── index.ts
+│
+├── tests/
+│   ├── github.test.ts
+│   ├── project-filters.test.tsx
+│   ├── projects-data.test.ts
+│   └── site-data.test.ts
+│
+├── docs/
+│   └── ENGINEERING_REPORT.md
+│
+├── .env.example
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── tsconfig.json
+├── vitest.config.ts
+└── README.md
+```
+
+---
+
+# ⚙️ Getting Started
+
+## Prerequisites
+
+Make sure the following are installed:
+
+- Node.js
+- npm
+- Git
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/srijan2312/srijan-kumar-portfolio.git
+```
+
+## 2. Enter the Project
+
+```bash
+cd srijan-kumar-portfolio
+```
+
+## 3. Install Dependencies
+
+```bash
+npm install
+```
+
+## 4. Start Development Server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```text
+http://localhost:3000
+```
+
+---
+
+# 🧪 Development Commands
+
+### Development
+
+```bash
+npm run dev
+```
+
+### Production Build
+
+```bash
+npm run build
+```
+
+### Production Server
+
+```bash
+npm run start
+```
+
+### Tests
+
+```bash
+npm run test
+```
+
+---
+
+# 🔍 Testing
+
+The project includes automated tests covering important application behaviour.
+
+Current test areas include:
+
+- Project data integrity
+- Project slug validation
+- Project category validation
+- Project URL validation
+- Project filtering
+- Project lookup
+- GitHub-related functionality
+- Site data validation
+
+Run the test suite with:
+
+```bash
+npm run test
+```
+
+Before deploying a major change, a production build can be verified with:
+
+```bash
+npm run build
+```
+
+---
+
+# 🔐 Environment Configuration
+
+Environment-specific configuration can be supplied through:
+
+```text
+.env.local
+```
+
+Example configuration is provided through:
+
+```text
+.env.example
+```
+
+Private credentials and environment variables should never be committed to GitHub.
+
+---
+
+# 🚢 Deployment
+
+The portfolio is deployed on **Vercel** and connected to the GitHub repository.
+
+### Production URL
+
+**https://srijan-kumar-portfolio-alpha.vercel.app**
+
+The project uses Next.js and Vercel's native deployment workflow.
+
+### Deployment Workflow
+
+```text
+Local Development
+       │
+       ▼
+   Git Commit
+       │
+       ▼
+   Git Push
+       │
+       ▼
+     GitHub
+       │
+       ▼
+     Vercel
+       │
+       ▼
+Production Deployment
+```
+
+Changes can be deployed by pushing to the configured production branch:
+
+```bash
+git add .
+git commit -m "update portfolio"
+git push origin main
+```
+
+---
+
+# 📄 Resume
+
+The portfolio includes my resume at:
+
+```text
+public/resume/Srijan_Kumar_Resume.pdf
+```
+
+The resume can also be accessed directly through the portfolio's Resume section.
+
+---
+
+# 🔗 Important Links
+
+| Resource | Link |
+|---|---|
+| 🌐 Portfolio | https://srijan-kumar-portfolio-alpha.vercel.app |
+| 💼 LinkedIn | https://www.linkedin.com/in/srijan-kumar-2b41b124a |
+| 🐙 GitHub | https://github.com/srijan2312 |
+
+---
+
+# 📦 Project Repositories
+
+### LinkGraveyard
+
+**Repository**
+
+https://github.com/srijan2312/LinkGraveyard
+
+**Live Application**
+
+https://link-graveyard.vercel.app/
+
+---
+
+### SkillSwap
+
+**Repository**
+
+https://github.com/srijan2312/SkillSwap-Peer-to-Peer-Skill-Exchange-Platform
+
+**Live Application**
+
+https://skill-swap-peer-to-peer-skill-excha-lovat.vercel.app
+
+---
+
+# 🎯 Development Philosophy
+
+The portfolio is intentionally focused on:
+
+- Clean component architecture
+- Strong TypeScript usage
+- Reusable UI components
+- Structured project data
+- Maintainable code
+- Responsive design
+- Accessibility
 - Performance
-- Developer experience
-- Real-world requirements
+- SEO
+- Production-ready deployment
+
+The goal is to keep the codebase understandable while still demonstrating practical engineering practices.
 
 ---
 
-## 🔮 Future Improvements
+# 📈 Future Improvements
 
-Possible future improvements include:
+Potential future improvements include:
 
-- More detailed case studies
-- Additional project demonstrations
-- Analytics
-- Interactive architecture visualizations
-- Further accessibility improvements
-- Performance monitoring
-- Additional SEO improvements
-
-The current implementation intentionally keeps the architecture simple instead of introducing unnecessary complexity.
+- Additional project case studies
+- More GitHub activity integrations
+- Enhanced project analytics
+- Additional performance optimizations
+- More interactive architecture visualizations
+- Custom domain configuration
 
 ---
 
-## 📬 Contact
+# 📬 Contact
 
-### Srijan Kumar
+For professional opportunities, collaboration, or technical discussions:
 
-**Full-Stack Software Engineer**
+**LinkedIn:**  
+https://www.linkedin.com/in/srijan-kumar-2b41b124a
 
-📍 Bettiah, Bihar, India
-
-📧 srijankumar11627@gmail.com
-
-🔗 [GitHub](https://github.com/srijan2312)
-
-🔗 [LinkedIn](YOUR_LINKEDIN_URL)
-
-🌐 [Portfolio](YOUR_PORTFOLIO_URL)
-
-📄 [Resume](./public/resume/Srijan_Kumar_Resume.pdf)
-
----
-
-## ⭐ Featured Repositories
-
-| Project | Description | Links |
-|---|---|---|
-| 🔗 **LinkGraveyard** | Web resource preservation & health monitoring | [GitHub](https://github.com/srijan2312/LinkGraveyard) · [Live](YOUR_LINKGRAVEYARD_LIVE_URL) |
-| 🤝 **SkillSwap** | Peer-to-peer skill exchange platform | [GitHub](https://github.com/srijan2312/SkillSwap-Peer-to-Peer-Skill-Exchange-Platform) · [Live](https://skill-swap-peer-to-peer-skill-excha-lovat.vercel.app) |
-
----
-
-## 📄 License
-
-This repository contains my personal portfolio website.
-
-The source code is publicly available for reference and learning.
-
-Personal information, resume content, project-specific content, images, and other personal assets should not be reused without permission.
+**GitHub:**  
+https://github.com/srijan2312
 
 ---
 
 <p align="center">
-  <strong>Built with Next.js · React · TypeScript</strong>
+  Built with Next.js · React · TypeScript · Tailwind CSS
 </p>
 
 <p align="center">
-  ⭐ If you found something useful here, feel free to explore the projects.
+  © Srijan Kumar
 </p>
