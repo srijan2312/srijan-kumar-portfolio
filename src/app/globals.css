@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Design system: "engineering laboratory + editorial portfolio"
+   Dark-first, deep charcoal surfaces, restrained violet/blue accents,
+   editorial serif display type paired with a technical mono.
+------------------------------------------------------------------- */
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-jbmono), ui-monospace, SFMono-Regular, monospace;
+}
+
+@theme {
+  /* Surfaces — deep charcoal / near-black */
+  --color-ink-950: #070709;
+  --color-ink-900: #0b0b0e;
+  --color-ink-850: #0f0f14;
+  --color-ink-800: #14141b;
+  --color-ink-700: #1e1e27;
+
+  /* Type — off-white scale */
+  --color-paper-50: #f4f3ee;
+  --color-paper-200: #d7d6d0;
+  --color-paper-400: #a3a29b;
+  --color-paper-500: #7c7b75;
+
+  /* Restrained accents */
+  --color-accent-violet: #8b5cf6;
+  --color-accent-violet-soft: #a78bfa;
+  --color-accent-blue: #5ea8ff;
+  --color-accent-blue-soft: #93c5fd;
+
+  /* Motion */
+  --animate-flow: flow 3s linear infinite;
+  --animate-node-pulse: node-pulse 4s ease-in-out infinite;
+
+  @keyframes flow {
+    to {
+      stroke-dashoffset: -32;
+    }
+  }
+  @keyframes node-pulse {
+    0%,
+    100% {
+      opacity: 0.55;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink-950);
+  color: var(--color-paper-50);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent-violet) 70%, transparent);
+  color: #fff;
+}
+
+/* Visible, consistent keyboard focus (WCAG 2.2 AA) */
+:focus-visible {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Subtle film grain over the whole page — static, zero animation cost */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Blueprint grid backdrop for the hero */
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, black 30%, transparent 75%);
+}
+
+/* Thin scrollbar matching the theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-700);
+  border-radius: 8px;
+  border: 2px solid var(--color-ink-950);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a35;
+}
+
+/* ------------------------------------------------------------------
+   Entrance + scroll-reveal system (pure CSS — no hydration races,
+   works without JS, honors reduced motion via the media query below).
+------------------------------------------------------------------- */
+
+/* Hero entrance: plays once on load. `both` fill keeps elements hidden
+   during their stagger delay without any JavaScript. */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-enter {
+  animation: hero-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Scroll reveal: hidden state only applies when JS is available
+   (the `js` class is set by an inline script in <head>), so no-JS
+   users always see the content. */
+.reveal {
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+html.js .reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll cue float */
+@keyframes cue-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+.animate-cue {
+  animation: cue-float 2.2s ease-in-out infinite;
+}
+
+/* Respect users who prefer reduced motion: kill smooth scroll,
+   CSS animations and transitions globally. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  html.js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-enter {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
