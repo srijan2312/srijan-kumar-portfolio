@@ -8,9 +8,12 @@ import {
   Code2,
   Copy,
   Mail,
-  MessageCircle,
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/brands";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  WhatsappIcon,
+} from "@/components/icons/brands";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 import { site } from "@/data/site";
@@ -55,7 +58,9 @@ export function ContactSection() {
 
   const whatsappUrl =
     "https://wa.me/918986480209?text=" +
-    encodeURIComponent("Hello Srijan, I found your portfolio and would like to connect.");
+    encodeURIComponent(
+      "Hello Srijan, I found your portfolio and would like to connect."
+    );
 
   return (
     <section
@@ -128,11 +133,13 @@ export function ContactSection() {
               aria-label="Contact Srijan on WhatsApp (opens in new tab)"
               className="inline-flex h-12 items-center gap-2 rounded-md border border-white/15 bg-white/[0.03] px-5 text-sm font-medium text-paper-50 transition-all duration-200 hover:border-white/30 hover:bg-white/[0.07]"
             >
-              <MessageCircle
+              <WhatsappIcon
                 aria-hidden="true"
-                className="size-4 text-accent-blue-soft"
+                className="size-4 text-[#25D366]"
               />
+
               WhatsApp
+
               <ArrowUpRight
                 aria-hidden="true"
                 className="size-3.5 text-paper-500"
@@ -156,7 +163,10 @@ export function ContactSection() {
                         rel="noopener noreferrer"
                         className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-2.5 text-sm text-paper-400 transition-colors duration-200 hover:border-white/25 hover:text-paper-50"
                       >
-                        <Icon aria-hidden="true" className="size-4" />
+                        <Icon
+                          aria-hidden="true"
+                          className="size-4"
+                        />
 
                         {s.label}
 
