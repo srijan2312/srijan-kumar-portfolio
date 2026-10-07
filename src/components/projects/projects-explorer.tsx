@@ -42,7 +42,6 @@ export function ProjectsExplorer({ projects }: { projects: Project[] }) {
       frontend: 0,
       "full-stack": 0,
       backend: 0,
-      blockchain: 0,
     };
     for (const p of projects) c[p.category] += 1;
     return c;
