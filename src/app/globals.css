@@ -1,8 +1,9 @@
+
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------
-   Design system: "engineering laboratory + editorial portfolio"
-   Dark-first, deep charcoal surfaces, restrained violet/blue accents,
+   Design system: engineering laboratory + editorial portfolio
+   Dark-first charcoal surfaces, restrained violet/blue accents,
    editorial serif display type paired with a technical mono.
 ------------------------------------------------------------------- */
 
@@ -13,20 +14,20 @@
 }
 
 @theme {
-  /* Surfaces — deep charcoal / near-black */
+  /* Surfaces */
   --color-ink-950: #070709;
   --color-ink-900: #0b0b0e;
   --color-ink-850: #0f0f14;
   --color-ink-800: #14141b;
   --color-ink-700: #1e1e27;
 
-  /* Type — off-white scale */
+  /* Type */
   --color-paper-50: #f4f3ee;
   --color-paper-200: #d7d6d0;
   --color-paper-400: #a3a29b;
   --color-paper-500: #7c7b75;
 
-  /* Restrained accents */
+  /* Accents */
   --color-accent-violet: #8b5cf6;
   --color-accent-violet-soft: #a78bfa;
   --color-accent-blue: #5ea8ff;
@@ -41,16 +42,22 @@
       stroke-dashoffset: -32;
     }
   }
+
   @keyframes node-pulse {
     0%,
     100% {
       opacity: 0.55;
     }
+
     50% {
       opacity: 1;
     }
   }
 }
+
+/* ------------------------------------------------------------------
+   Global foundation
+------------------------------------------------------------------- */
 
 :root {
   color-scheme: dark;
@@ -58,15 +65,17 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--color-ink-950);
 }
 
 body {
+  min-height: 100%;
+  overflow-x: hidden;
   background-color: var(--color-ink-950);
   color: var(--color-paper-50);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
 }
 
 ::selection {
@@ -74,14 +83,17 @@ body {
   color: #fff;
 }
 
-/* Visible, consistent keyboard focus (WCAG 2.2 AA) */
+/* Visible keyboard focus */
 :focus-visible {
   outline: 2px solid var(--color-accent-blue);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
-/* Subtle film grain over the whole page — static, zero animation cost */
+/* ------------------------------------------------------------------
+   Static film grain
+------------------------------------------------------------------- */
+
 .noise-overlay {
   position: fixed;
   inset: 0;
@@ -91,102 +103,268 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Blueprint grid backdrop for the hero */
+/* ------------------------------------------------------------------
+   Hero blueprint grid
+------------------------------------------------------------------- */
+
 .blueprint-grid {
   background-image:
-    linear-gradient(to right, rgb(255 255 255 / 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+    linear-gradient(
+      to right,
+      rgb(255 255 255 / 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 0.035) 1px,
+      transparent 1px
+    );
   background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, black 30%, transparent 75%);
+  mask-image: radial-gradient(
+    ellipse 90% 80% at 50% 40%,
+    black 30%,
+    transparent 75%
+  );
 }
 
-/* Thin scrollbar matching the theme */
+/* ------------------------------------------------------------------
+   Scrollbar
+------------------------------------------------------------------- */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-ink-950);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-ink-700);
-  border-radius: 8px;
   border: 2px solid var(--color-ink-950);
+  border-radius: 8px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #2a2a35;
 }
 
 /* ------------------------------------------------------------------
-   Entrance + scroll-reveal system (pure CSS — no hydration races,
-   works without JS, honors reduced motion via the media query below).
+   Hero entrance animation
 ------------------------------------------------------------------- */
 
-/* Hero entrance: plays once on load. `both` fill keeps elements hidden
-   during their stagger delay without any JavaScript. */
 @keyframes hero-rise {
   from {
     opacity: 0;
     transform: translateY(26px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .hero-enter {
   animation: hero-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* Scroll reveal: hidden state only applies when JS is available
-   (the `js` class is set by an inline script in <head>), so no-JS
-   users always see the content. */
+/* ------------------------------------------------------------------
+   Scroll reveal
+   Content remains visible when JavaScript is unavailable.
+------------------------------------------------------------------- */
+
 .reveal {
   transition:
     opacity 0.5s ease,
     transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 html.js .reveal {
   opacity: 0;
   transform: translateY(24px);
 }
+
 html.js .reveal-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Scroll cue float */
+/* ------------------------------------------------------------------
+   Scroll cue
+------------------------------------------------------------------- */
+
 @keyframes cue-float {
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(8px);
   }
 }
+
 .animate-cue {
   animation: cue-float 2.2s ease-in-out infinite;
 }
 
-/* Respect users who prefer reduced motion: kill smooth scroll,
-   CSS animations and transitions globally. */
+/* ------------------------------------------------------------------
+   Cinematic 3 → 2 → 1 intro
+   IMPORTANT:
+   - Do not add an automatic CSS exit delay to .cinematic-loader.
+   - React controls the countdown and when the loader is removed.
+------------------------------------------------------------------- */
+
+.cinematic-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #070709;
+  color: #f4f3ee;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 650ms ease,
+    visibility 0s linear 650ms;
+}
+
+/* React should add this class when the countdown has completed. */
+.cinematic-loader--exit {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-glow {
+  position: absolute;
+  width: min(65vw, 600px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgb(139 92 246 / 0.15),
+    rgb(94 168 255 / 0.05) 40%,
+    transparent 70%
+  );
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.loader-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  animation: number-enter 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.loader-number {
+  color: #f4f3ee;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(9rem, 23vw, 19rem);
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: -0.09em;
+  text-shadow: 0 0 65px rgb(167 139 250 / 0.18);
+  font-variant-numeric: tabular-nums;
+}
+
+.loader-wordmark {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(2rem, 7vw, 5rem);
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.loader-caption {
+  color: #a78bfa;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.loader-progress {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  overflow: hidden;
+  background: rgb(255 255 255 / 0.08);
+}
+
+.loader-progress-fill {
+  display: block;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #8b5cf6, #5ea8ff);
+  transition: width 0.5s ease;
+}
+
+/* Number entrance */
+@keyframes number-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.82) translateY(12px);
+    filter: blur(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Optional class if the component replays the number animation per count. */
+.loader-content--change {
+  animation: number-enter 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* ------------------------------------------------------------------
+   Reduced motion accessibility
+------------------------------------------------------------------- */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
+
   html.js .reveal {
     opacity: 1;
     transform: none;
     transition: none;
   }
-  .hero-enter {
-    animation: none;
+
+  .hero-enter,
+  .animate-cue,
+  .loader-content,
+  .loader-content--change {
+    animation: none !important;
   }
+
+  .cinematic-loader {
+    transition: none;
+  }
+
+  .loader-progress-fill {
+    transition: none;
+  }
+
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

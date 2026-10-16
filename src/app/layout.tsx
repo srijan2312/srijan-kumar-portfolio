@@ -2,8 +2,11 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { CinematicLoader } from "@/components/ui/cinematic-loader";
+
 import { site } from "@/data/site";
 import { socials } from "@/data/socials";
 import { allSkills } from "@/data/skills";
@@ -92,8 +95,8 @@ function personJsonLd() {
     },
     knowsAbout: allSkills,
     sameAs: socials
-      .filter((s) => s.id !== "email")
-      .map((s) => s.href),
+      .filter((social) => social.id !== "email")
+      .map((social) => social.href),
   };
 }
 
@@ -103,45 +106,64 @@ function websiteJsonLd() {
     "@type": "WebSite",
     name: `${site.name} — Portfolio`,
     url: site.url,
-    author: { "@type": "Person", name: site.name },
+    author: {
+      "@type": "Person",
+      name: site.name,
+    },
     inLanguage: "en",
   };
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
     <html
       lang="en"
-        suppressHydrationWarning
+      suppressHydrationWarning
       className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-ink-950 text-paper-50">
+        <CinematicLoader />
+
         <script
-          // Runs before first paint: enables JS-gated CSS states (e.g. scroll
-          // reveals) without a flash. No-JS users keep visible content.
+          // Enable JS-gated scroll-reveal styles before the page is displayed.
           dangerouslySetInnerHTML={{
             __html: "document.documentElement.classList.add('js')",
           }}
         />
+
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd()) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd()),
+          }}
         />
+
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd()),
+          }}
         />
+
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:rounded-md focus:bg-paper-50 focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-ink-950"
         >
           Skip to content
         </a>
+
         <div aria-hidden="true" className="noise-overlay" />
+
         <SiteHeader />
+
         <div id="main" tabIndex={-1} className="flex-1 outline-none">
           {children}
         </div>
+
         <SiteFooter />
       </body>
     </html>
